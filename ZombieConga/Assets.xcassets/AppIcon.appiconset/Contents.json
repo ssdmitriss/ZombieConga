@@ -55,11 +55,13 @@
       "size" : "60x60"
     },
     {
+      "filename" : "Icon20.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "20x20"
     },
     {
+      "filename" : "Icon20@2x.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "20x20"
@@ -70,31 +72,37 @@
       "size" : "29x29"
     },
     {
+      "filename" : "Icon29@2x.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
+      "filename" : "Icon40.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "40x40"
     },
     {
+      "filename" : "Icon40@2x.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
+      "filename" : "Icon76.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "76x76"
     },
     {
+      "filename" : "Icon76@2x.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "76x76"
     },
     {
+      "filename" : "Icon83.5@2x.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "83.5x83.5"
@@ -103,55 +111,6 @@
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
-    },
-    {
-      "filename" : "Icon20.png",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "filename" : "Icon76@2x.png",
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "filename" : "Icon20@2x.png",
-      "idiom" : "iphone",
-      "scale" : "2x",
-      "size" : "20x20",
-      "unassigned" : true
-    },
-    {
-      "filename" : "Icon29@2x.png",
-      "idiom" : "iphone",
-      "scale" : "2x",
-      "size" : "29x29",
-      "unassigned" : true
-    },
-    {
-      "filename" : "Icon40@2x.png",
-      "idiom" : "iphone",
-      "scale" : "2x",
-      "size" : "40x40",
-      "unassigned" : true
-    },
-    {
-      "filename" : "Icon40.png",
-      "idiom" : "universal",
-      "scale" : "1x",
-      "unassigned" : true
-    },
-    {
-      "filename" : "Icon76.png",
-      "idiom" : "universal",
-      "scale" : "1x",
-      "unassigned" : true
-    },
-    {
-      "filename" : "Icon83.5@2x.png",
-      "idiom" : "universal",
-      "scale" : "2x",
-      "unassigned" : true
     }
   ],
   "info" : {
