@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F72E7CD926F91F8400E56F37 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72E7CD826F91F8400E56F37 /* GameOverScene.swift */; };
+		F72E7CDB26F9256A00E56F37 /* AVFoundations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72E7CDA26F9256A00E56F37 /* AVFoundations.swift */; };
 		F7511D9726F6179700B9BFCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7511D9626F6179700B9BFCF /* AppDelegate.swift */; };
 		F7511D9926F6179700B9BFCF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7511D9826F6179700B9BFCF /* SceneDelegate.swift */; };
 		F7511D9B26F6179700B9BFCF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7511D9A26F6179700B9BFCF /* GameViewController.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F72E7CD826F91F8400E56F37 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		F72E7CDA26F9256A00E56F37 /* AVFoundations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFoundations.swift; sourceTree = "<group>"; };
 		F7511D9326F6179700B9BFCF /* ZombieConga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZombieConga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7511D9626F6179700B9BFCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7511D9826F6179700B9BFCF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 				F7511D9826F6179700B9BFCF /* SceneDelegate.swift */,
 				F7511D9A26F6179700B9BFCF /* GameViewController.swift */,
 				F7637DD326F619190075E8F2 /* GameScene.swift */,
+				F72E7CD826F91F8400E56F37 /* GameOverScene.swift */,
 				F7637DDF26F78FDE0075E8F2 /* Sounds */,
 				F7637DD826F6A6BD0075E8F2 /* Source */,
 				F7511D9F26F6179800B9BFCF /* Assets.xcassets */,
@@ -91,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				F7637DD926F6A6D40075E8F2 /* MyUtils.swift */,
+				F72E7CDA26F9256A00E56F37 /* AVFoundations.swift */,
 				F7637DDB26F6A8640075E8F2 /* CGPoint+extension.swift */,
 				F7637DDD26F6B3FA0075E8F2 /* CGFloat+extension.swift */,
 			);
@@ -190,7 +196,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7511D9B26F6179700B9BFCF /* GameViewController.swift in Sources */,
+				F72E7CDB26F9256A00E56F37 /* AVFoundations.swift in Sources */,
 				F7637DDE26F6B3FA0075E8F2 /* CGFloat+extension.swift in Sources */,
+				F72E7CD926F91F8400E56F37 /* GameOverScene.swift in Sources */,
 				F7637DDA26F6A6D40075E8F2 /* MyUtils.swift in Sources */,
 				F7637DDC26F6A8640075E8F2 /* CGPoint+extension.swift in Sources */,
 				F7511D9726F6179700B9BFCF /* AppDelegate.swift in Sources */,

@@ -25,6 +25,9 @@ final class GameScene: SKScene {
 
     /// Флаг того, что зомби неуязвим
     private var isZombieInvulnerable = false
+    /// Количество жизней
+    private var lives = 5
+    private var isGameOver = false
 
     private lazy var zombie: SKSpriteNode = {
         let node = SKSpriteNode(imageNamed: "zombie1")
@@ -67,8 +70,8 @@ final class GameScene: SKScene {
         setupZombieOneNode()
         generateEnemies()
         generateCats()
-        debugDrawPlaylableArea()
-
+        playBackgroundMusic(filename: "backgroundMusic.mp3")
+//        debugDrawPlaylableArea()
     }
 
     override func update(_ currentTime: TimeInterval) {
@@ -85,6 +88,7 @@ final class GameScene: SKScene {
 
         boundsCheckZombie()
         moveTrain()
+        checkGameOver()
     }
 
     override func didEvaluateActions() {
@@ -277,9 +281,11 @@ final class GameScene: SKScene {
     }
 
     private func moveTrain() {
+        var trainCount = 0
         var targetPosition = zombie.position
 
         enumerateChildNodes(withName: "train") { node, stop in
+            trainCount += 1
             if !node.hasActions() {
                 let actionDuration = 0.3
                 let offset = targetPosition - node.position
@@ -288,6 +294,7 @@ final class GameScene: SKScene {
                 let amountToMove = amountToMovePerSec * CGFloat(actionDuration)
                 let moveAction = SKAction.moveBy(x: amountToMove.x, y: amountToMove.y, duration: actionDuration)
                 node.run(moveAction)
+                self.checkGameWin(withTrainCount: trainCount)
             }
             targetPosition = node.position
         }
@@ -299,6 +306,9 @@ final class GameScene: SKScene {
         isZombieInvulnerable = true
         startInvulnerableAnimation()
         run(Constatnts.enemyCollisionSound)
+
+        loseCats()
+        lives -= 1
     }
 
     private func startInvulnerableAnimation() {
@@ -342,6 +352,50 @@ final class GameScene: SKScene {
         }
     }
 
+    private func loseCats() {
+        var loseCount = 0
+        enumerateChildNodes(withName: "train") { node, stop in
+            var randomSpot = node.position
+            randomSpot.x += CGFloat.random(min: -100, max: 100)
+            randomSpot.y += CGFloat.random(min: -100, max: 100)
+            // 3
+            node.name = ""
+            node.run(SKAction.sequence(
+                [
+                    SKAction.group([
+                    SKAction.rotate(byAngle: π*4, duration: 1.0),
+                    SKAction.move(to: randomSpot, duration: 1.0),
+                    SKAction.scale(to: 0, duration: 1.0)
+                    ]),
+                    SKAction.removeFromParent()
+                ]
+            ))
+            loseCount += 1
+            if loseCount >= 2 {
+                stop[0] = true
+            }
+        }
+    }
+
+    private func checkGameOver() {
+        guard lives <= 0 && !isGameOver else { return }
+        isGameOver = true
+        showGameOverScene(isLose: true)
+        backgroundMusicPlayer.stop()
+    }
+
+    private func checkGameWin(withTrainCount count: Int) {
+        guard count >= 15 && !isGameOver else { return }
+        backgroundMusicPlayer.stop()
+        showGameOverScene(isLose: false)
+    }
+
+    private func showGameOverScene(isLose: Bool) {
+        let gameOverScene = GameOverScene(size: size, won: !isLose)
+        gameOverScene.scaleMode = scaleMode
+        let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
+        view?.presentScene(gameOverScene, transition: reveal)
+    }
 }
 
 extension GameScene {

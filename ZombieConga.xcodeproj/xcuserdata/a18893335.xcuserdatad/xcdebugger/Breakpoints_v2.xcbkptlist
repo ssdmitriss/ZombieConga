@@ -14,8 +14,8 @@
             filePath = "ZombieConga/GameScene.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
             landmarkName = "move(sprite:velocity:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "ZombieConga/GameScene.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "309"
-            endingLineNumber = "309"
+            startingLineNumber = "319"
+            endingLineNumber = "319"
             landmarkName = "startInvulnerableAnimation()"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "ZombieConga/GameScene.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "310"
-            endingLineNumber = "310"
+            startingLineNumber = "320"
+            endingLineNumber = "320"
             landmarkName = "startInvulnerableAnimation()"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,10 +62,58 @@
             filePath = "ZombieConga/GameScene.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "336"
-            endingLineNumber = "336"
+            startingLineNumber = "346"
+            endingLineNumber = "346"
             landmarkName = "checkCollisions()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2EF4F43F-A087-4362-BC91-003C2AD94BE9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZombieConga/GameScene.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "287"
+            endingLineNumber = "287"
+            landmarkName = "moveTrain()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2EF4F43F-A087-4362-BC91-003C2AD94BE9 - 304714b2e63c6469"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ZombieConga.GameScene.moveTrain() -&gt; ()"
+                  moduleName = "ZombieConga"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a18893335/Desktop/ZombieConga/ZombieConga/GameScene.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "286"
+                  endingLineNumber = "286"
+                  offsetFromSymbolStart = "192">
+               </Location>
+               <Location
+                  uuid = "2EF4F43F-A087-4362-BC91-003C2AD94BE9 - 7b5b4370d0b8367e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.SKNode, Swift.UnsafeMutablePointer&lt;ObjectiveC.ObjCBool&gt;) -&gt; () in ZombieConga.GameScene.moveTrain() -&gt; ()"
+                  moduleName = "ZombieConga"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a18893335/Desktop/ZombieConga/ZombieConga/GameScene.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "283"
+                  endingLineNumber = "283"
+                  offsetFromSymbolStart = "375">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
