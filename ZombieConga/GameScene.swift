@@ -54,6 +54,38 @@ final class GameScene: SKScene {
         return node
     }()
 
+    private lazy var livesLabel: SKLabelNode = {
+        let livesLabel = SKLabelNode(fontNamed: "Glimstick")
+        livesLabel.text = "Lives: \(lives)"
+        livesLabel.fontColor = SKColor.black
+        livesLabel.fontSize = 100
+        livesLabel.zPosition = 150
+        livesLabel.horizontalAlignmentMode = .left
+        livesLabel.verticalAlignmentMode = .bottom
+        livesLabel.position = CGPoint(
+            x: -playableRect.size.width / 2 + CGFloat(20),
+            y: -playableRect.size.height / 2 + CGFloat(20)
+        )
+
+        return livesLabel
+    }()
+
+    private lazy var catsLabel: SKLabelNode = {
+        let livesLabel = SKLabelNode(fontNamed: "Glimstick")
+        livesLabel.text = "Cats: 0"
+        livesLabel.fontColor = SKColor.black
+        livesLabel.fontSize = 100
+        livesLabel.zPosition = 150
+        livesLabel.horizontalAlignmentMode = .right
+        livesLabel.verticalAlignmentMode = .bottom
+        livesLabel.position = CGPoint(
+            x: playableRect.size.width / 2 - CGFloat(20),
+            y: -playableRect.size.height / 2 - CGFloat(20)
+        )
+
+        return livesLabel
+    }()
+
     // MARK: - Initialization
 
     override init(size: CGSize) {
@@ -89,6 +121,7 @@ final class GameScene: SKScene {
         generateCats()
         playBackgroundMusic(filename: "backgroundMusic.mp3")
         setupCamera()
+        setupLabels()
         //        debugDrawPlaylableArea()
     }
 
@@ -110,8 +143,8 @@ final class GameScene: SKScene {
         boundsCheckZombie()
         moveTrain()
         moveCamera()
+        updateLivesLabel()
         checkGameOver()
-//        cameraNode.position = zombie.position
     }
 
     override func didEvaluateActions() {
@@ -182,6 +215,15 @@ final class GameScene: SKScene {
 
     private func setupZombieOneNode() {
         addChild(zombie)
+    }
+
+    private func setupLabels() {
+        cameraNode.addChild(livesLabel)
+        cameraNode.addChild(catsLabel)
+    }
+
+    private func updateLivesLabel() {
+        livesLabel.text = "Lives: \(lives)"
     }
 
     private func startZombieAnimation() {
@@ -381,6 +423,8 @@ final class GameScene: SKScene {
             }
             targetPosition = node.position
         }
+
+        catsLabel.text = "Cats: \(trainCount)"
     }
 
     private func zombieHit(enemy: SKSpriteNode) {
